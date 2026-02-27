@@ -13,7 +13,7 @@ public class Master {
 		// TODO Auto-generated method stub
 			
 		Scanner scan = new Scanner(System.in);
-		List<Extra> extras = new ArrayList();
+		List<Extra> extras = new ArrayList<>();
 		List<Reservation> reservations = new ArrayList<>();
 		List<Stay> stays = new ArrayList<>();
 		
@@ -80,7 +80,7 @@ public class Master {
 			}
 			System.out.println("Искате ли екстри? (Да / Не)");
 			String ifExtras = scan.nextLine();
-			if(ifExtras.equals("Да")) 
+			if(ifExtras.equals("Да")){ 
 				int option = 0;
 				ExtraBuilder extraBuilder = new ExtraBuilder();
 				extraBuilder.addDays(nights);
@@ -96,6 +96,7 @@ public class Master {
 					option = Integer.valueOf(scan.nextLine());
 					stay.addExtra(extraBuilder.createExtra(option));
 					
+					}
 				}
 			}
 	
